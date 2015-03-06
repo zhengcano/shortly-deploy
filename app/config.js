@@ -3,7 +3,7 @@ var crypto = require('crypto');
 var bcrypt = require('bcrypt-nodejs');
 var Promise = require('bluebird');
 
-var mongoURI = process.env.CUSTOMCONNSTR_MONGOLAB_URI || 'mongodb://localhost:27017/test'
+var mongoURI = process.env.MONGOLAB_URI || 'mongodb://localhost:27017/test';
 mongoose.connect(mongoURI);
 
 var db = mongoose.connection;
